@@ -1,0 +1,24 @@
+import java.net.*;
+import java.util.*;
+
+public class dns_i_h
+{
+  public static void main(String[] args){
+  String host;
+  Scanner input = new Scanner(System.in);  
+  System.out.print("\nEnter IP address :");
+  host = input.nextLine();
+ 
+  try
+  {
+   InetAddress address = InetAddress.getByName(host);
+   System.out.println("Host name: " + address.getHostName());
+  }
+  catch (UnknownHostException ex)
+  {
+   System.out.println("Could not find " + host);
+  }
+ 
+  }
+ 
+  }
